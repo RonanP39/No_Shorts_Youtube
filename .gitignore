@@ -1,0 +1,19 @@
+# VS Code
+.history/
+.vscode/
+*.code-workspace
+
+# Node
+node_modules/
+npm-debug.log
+package-lock.json
+
+# OS
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+
+# Extensions
+*.crx
+*.zip
