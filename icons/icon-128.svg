@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">
+  <!-- Fundo vermelho do YouTube -->
+  <circle cx="64" cy="64" r="60" fill="#FF0000"/>
+  
+  <!-- Símbolo de "não" (círculo com linha diagonal) -->
+  <circle cx="64" cy="64" r="40" fill="none" stroke="white" stroke-width="6"/>
+  <line x1="35" y1="93" x2="93" y2="35" stroke="white" stroke-width="6" stroke-linecap="round"/>
+  
+  <!-- Efeito de sombra -->
+  <circle cx="64" cy="64" r="60" fill="none" stroke="rgba(0,0,0,0.2)" stroke-width="2"/>
+</svg>

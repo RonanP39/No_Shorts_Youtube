@@ -1,0 +1,95 @@
+# 🚫 YouTube Shorts Blocker
+
+Extensão do Chrome para bloquear e ocultar vídeos **Shorts** no YouTube.
+
+## 📋 Funcionalidades
+
+✅ **Oculta automaticamente** cards e links de Shorts na página inicial do YouTube  
+✅ **Redireciona** qualquer tentativa de acessar `/shorts/*` para a página inicial  
+✅ **Alternância rápida** com popup da extensão para ativar/desativar  
+✅ **Sincronização** da configuração entre abas  
+✅ **Ícones personalizados** em vermelho e branco  
+
+## 🚀 Instalação
+
+### Passo 1: Abrir modo desenvolvedor
+
+1. Abra o Chrome
+2. Digite `chrome://extensions/` na barra de endereços
+3. Clique no toggle **"Modo do desenvolvedor"** no canto superior direito
+
+### Passo 2: Carregar a extensão
+
+1. Clique em **"Carregar extensão sem compactação"**
+2. Selecione a pasta `Shorts_youtube`
+
+### Passo 3: Verificar instalação
+
+- Você verá o ícone 🚫 vermelho na barra de ferramentas
+- A extensão já está ativa por padrão
+
+## 💡 Como Usar
+
+### Ativar/Desativar
+
+1. Clique no ícone vermelho 🚫 na barra de ferramentas
+2. Use o toggle para ativar ou desativar
+3. O estado é salvo automaticamente
+
+### O que acontece
+
+- **Ativo**: Shorts são ocultados e qualquer acesso a `/shorts/*` redireciona para YouTube.com
+- **Inativo**: YouTube funciona normalmente
+
+## 📁 Estrutura do Projeto
+
+```
+Shorts_youtube/
+├── manifest.json          # Configuração da extensão
+├── content.js             # Script injetado nas páginas do YouTube
+├── background.js          # Service worker da extensão
+├── popup.html             # Interface do popup
+├── popup.js               # Lógica do popup
+├── icons/
+│   ├── icon-16.svg        # Ícone 16x16
+│   ├── icon-48.svg        # Ícone 48x48
+│   └── icon-128.svg       # Ícone 128x128
+└── README.md              # Este arquivo
+```
+
+## 🔧 Detalhes Técnicos
+
+- **Manifest V3**: Compatível com a versão mais recente do Chrome
+- **Storage**: Usa `chrome.storage.sync` para sincronizar settings
+- **Content Scripts**: Monitora mudanças no DOM e oculta Shorts
+- **Service Worker**: Detecta navegação para `/shorts` e redireciona
+
+## 📝 Permissões Utilizadas
+
+- `scripting`: Executar scripts nas páginas do YouTube
+- `tabs`: Detectar navegação entre abas
+- `storage`: Salvar preferências do usuário
+
+## 🐛 Troubleshooting
+
+### Shorts ainda aparecem?
+
+- Recarregue a página (F5 ou Ctrl+R)
+- Verifique se a extensão está ativada no popup
+- Limpe o cache do navegador
+
+### Ícone não aparece?
+
+- Verifique se os arquivos SVG estão na pasta `icons/`
+- Recrie o arquivo `manifest.json` se necessário
+
+## 🔄 Atualizações
+
+Para atualizar a extensão:
+
+1. Salve as alterações no código
+2. Clique no botão de atualizar ⟲ em `chrome://extensions/`
+
+## 📄 Licença
+
+Livre para uso pessoal. Use por sua conta e risco.
